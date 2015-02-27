@@ -1,7 +1,8 @@
 package controllers
 
+import services.ImgurService
+
 import models.Cat
-import models.Cats
 
 import play.api.mvc._
 import play.api.libs.json._
@@ -17,7 +18,7 @@ object CatApi extends Controller {
   def list = Action {
     Ok(Json.obj(
       "status" -> "success",
-      "data" -> Cats.list
+      "data" -> ImgurService.cats
     ))
   }
 }
