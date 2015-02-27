@@ -1,1 +1,2 @@
-GET     /     controllers.Api.index
+GET   /      controllers.Api.index
+GET   /cats  controllers.CatApi.list
