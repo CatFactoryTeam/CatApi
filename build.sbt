@@ -6,7 +6,7 @@ lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
   .dependsOn(shelter)
 
-lazy val shelter = RootProject(uri("git://github.com/CatFactoryTeam/CatShelter.git#setupShelter"))
+lazy val shelter = RootProject(uri("git://github.com/CatFactoryTeam/CatShelter.git#master"))
 
 scalaVersion := "2.11.1"
 
