@@ -1,6 +1,6 @@
 package controllers
 
-import services.ImgurService
+import services.CatShelter
 
 import models.Cat
 
@@ -18,7 +18,7 @@ object CatApi extends Controller {
   def list = Action {
     Ok(Json.obj(
       "status" -> "success",
-      "data" -> ImgurService.cats
+      "data" -> CatShelter.cats
     ))
   }
 }

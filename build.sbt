@@ -4,9 +4,9 @@ version := "1.0-SNAPSHOT"
 
 lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
-  .dependsOn(imgur)
+  .dependsOn(shelter)
 
-lazy val imgur = RootProject(uri("git://github.com/Cowa/Imgur-Scala.git#master"))
+lazy val shelter = RootProject(uri("git://github.com/CatFactoryTeam/CatShelter.git#setupShelter"))
 
 scalaVersion := "2.11.1"
 
