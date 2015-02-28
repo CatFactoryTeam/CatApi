@@ -1,6 +1,6 @@
 name := """CatRest"""
 
-version := "1.0-SNAPSHOT"
+version := "1.0.0"
 
 lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
@@ -8,11 +8,9 @@ lazy val root = (project in file("."))
 
 lazy val shelter = RootProject(uri("git://github.com/CatFactoryTeam/CatShelter.git#master"))
 
-scalaVersion := "2.11.1"
+scalaVersion := "2.11.5"
 
 libraryDependencies ++= Seq(
-  jdbc,
-  anorm,
   cache,
   ws
 )
