@@ -14,10 +14,10 @@ object CatApi extends Controller {
     def writes(cat: Cat) = Json.obj("id" -> cat.id, "link" -> cat.link)
   }
 
-  def list = Action {
+  def list = WithCors("GET") { Action {
     Ok(Json.obj(
       "status" -> "success",
       "data" -> CatShelter.cats
     ))
-  }
+  }}
 }
