@@ -1,4 +1,4 @@
-# CatRest
+# CatApi
 
 **A RESTful API filled with cats**
 

@@ -1,4 +1,4 @@
-name := """CatRest"""
+name := """CatApi"""
 
 version := "1.0.0"
 
