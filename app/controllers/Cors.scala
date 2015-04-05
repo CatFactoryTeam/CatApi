@@ -10,6 +10,7 @@ import play.api.http.HeaderNames._
   * @author Giovanni Costagliola, Nick McCready
   */
 case class WithCors(httpVerbs: String*) (action: EssentialAction) extends EssentialAction with Results {
+
   def apply(request: RequestHeader) = {
     implicit val executionContext: ExecutionContext = play.api.libs.concurrent.Execution.defaultContext
     val origin = request.headers.get(ORIGIN).getOrElse("*")
