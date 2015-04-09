@@ -9,11 +9,14 @@ import play.api.libs.json._
 import play.api.libs.functional.syntax._
 
 object CatApi extends Controller {
-
-  implicit val catWrites = new Writes[Cat] {
-    def writes(cat: Cat) = Json.obj("id" -> cat.id, "link" -> cat.link)
+  implicit val catToJson = new Writes[Cat] {
+    def writes(cat: Cat) = Json.obj(
+      "id" -> cat.id, "link" -> cat.link,
+      "mp4" -> cat.mp4, "webm" -> cat.webm
+    )
   }
 
+  /** Retieve all cats! */
   def list = WithCors("GET") { Action {
     Ok(Json.obj(
       "status" -> "success",
