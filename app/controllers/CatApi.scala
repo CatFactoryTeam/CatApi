@@ -11,8 +11,7 @@ import play.api.libs.functional.syntax._
 object CatApi extends Controller {
   implicit val catToJson = new Writes[Cat] {
     def writes(cat: Cat) = Json.obj(
-      "id" -> cat.id, "link" -> cat.link,
-      "mp4" -> cat.mp4, "webm" -> cat.webm
+      "id" -> cat.id, "link" -> cat.link, "mp4" -> cat.mp4
     )
   }
 
